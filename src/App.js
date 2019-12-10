@@ -1,102 +1,111 @@
-import React, { Component } from 'react';
-import Background from './background.png';
-import Icon from './IconBali.png';
+import React, { Component } from "react";
+import Background from "./bgmoss.png";
+import path from "./path.png";
+class Latihan extends Component {
+    render() {
+        return (
+            <div style={styles.background}>
+                <div style={styles.parent}>
+                        <h1 style={{
+                            margin: 26,
+                            color: "#FFF",
+                            fontFamily: "Poppins",
+                            fontStyle: "normal",
+                            fontWeight: "normal",
+                    fontSize: 24,
+                        }}>GO GREEN</h1>
+                    <div style={styles.logo}>
+                        <img src={path}
+                            style={{
+                                marginLeft: "95%"
+                            }}
+                        />
 
-class App extends Component{
-    render(){
-        return(
-            <div style={styles.wrapper}>
-                <div style={styles.logo}>
-                    <img 
-                    src={Icon} style={{marginLeft: '45%'}} alt="Icon Bali"
-                    
-                    />
-                
-                <div style={styles.description}>
-                    <h1 style={{fontSize: '48px', fontWeight: 'normal', marginTop: 10,}}>A Better way to</h1>
-                    <h1 style={{color: "#FCB371",fontSize: '48px', fontWeight: 'normal', }}>Travel To Bali</h1>
-                    <span style={{fontFamily: 'Roboto', fontWeight: 'normal', fontStyle: 'normal', fontSize: '10'}}>Cheapest and Easyer</span>
-                </div>
-
-                <div style={styles.wrapperBtn}>
-                    <div style={styles.button}>
-                        Read More
                     </div>
-                    <div style={styles.buttonTwo}>
-                    Reservation
+                    <div style={styles.parentQuotes}>
+                        <h1 style={{ alignSelf: "center",lineHeight: "1", fontWeight:"800", textAlign: "center", fontSize:"48px", textAlign: 'center' }}>Make it green
+                        </h1> 
+                    </div>
+                    <div style={styles.wraper}>
+                        <span style={{ marginLeft: 60, fontfamily: "Poppins", fontSize: "20px", fontStyle:"normal", textAlign:"center", fontWeight: "normal" }}>Now more than ever, Our planet is need our</span>
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "row", alignSelf: "center" }}>
+                        
+                        <div style={styles.parentButton1}>
+                            <div style={styles.Readmore1}>
+                                Do it Now
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
-        )
+            </div >
+        );
     }
 }
-
 let h = window.innerHeight;
 
 const styles = {
-    wrapper: {
+    background: {
         display: "flex",
         backgroundImage: `url(${Background})`,
-        height: '100%',
+        height: "100%",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPosition: "center",
-        
-        
-
+        justifyContent: "center",
+        alignItem: "center",
     },
-    logo: {
+    wraper: {
+        display: "flex",
+        justifyContent: "center",
+        alignItem: "center",
+        color: "#ffff",
+        marginRight: 30,
+    },
+    parent: {
+        display: "flex",
         height: h,
         width: "100%",
-        background: "rgba(42, 38, 61, 0.82)",
-       
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItem: "center",
     },
-    description: {
-        color: "#FFFFFF",
-        fontFamily: "Pacifico",
+    logo: {
+        display: "flex",
+        justifyContent: "left",
+        alignItem: "left",
+        marginRight: 20,
+    },
+    border: {
+        borderStyle: "solid",
+    },
+    parentQuotes: {
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItem: "center",
+        color: '#FFFFFF',
+        fontFamily: "Poppins",
+        fontSize: "20px",
         textAlign: "center",
-        lineHeight: "50px",
-        marginTop: 40,
     },
-    wrapperBtn: {
-        marginTop: '50px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+    parentButton1: {
+        display: "flex",
+        borderWidth: 5,
+        borderRadius: "100px",
+        alignSelf: "center",
+        marginTop: 50,
+        background: "#E67E22",
+        borderRadius: "100px",
     },
-    button: {
-        borderStyle: 'solid',
-        borderColor: '#FCB371',
-        color: '#FCB371',
-        fontFamily: 'Pacifico',
-        fontWeight: 'normal',
-        borderSize: '2px',
-        width: '12%',
-        textAlign: 'center',
-        padding: '10px',
-        borderRadius: '5px',
-    
-        
-    },
-    buttonTwo: {
-        borderStyle: 'solid',
-        borderColor: '#FCB371',
-        color: '#fff',
-        background: '#FCB371',
-        fontFamily: 'Pacifico',
-        fontWeight: 'normal',
-        borderSize: '2px',
-        width: '12%',
-        textAlign: 'center',
-        padding: '10px',
-        borderRadius: '5px',
-        marginLeft: '20px'
-    
+    Readmore1: {
+        color: "#ffff",
+        margin: 10,
+        marginRight: "30px",
+        marginLeft: "30px",
+        lineHeight: "28px",
+        fontSize: "20px",
+        top: "5px"
     }
-    
-
-    
 }
 
-export default App;
+export default Latihan;
